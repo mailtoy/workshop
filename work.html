@@ -38,16 +38,26 @@
 
 <!-- icon1 -->
 
-  <div class="row">
-  <div class="col-sm-6 col-md-4">
-    <div class="Person">
-      <button class="person center-block" ><img src="image/team.png" alt="person"></button>
-      <div class="caption">
-        <h3>PERSON</h3>
-        <!-- <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">off</a></p> -->
-      </div>
-    </div>
-  </div>
+<div class="row">
+          <div class="col-sm-6 col-md-4">
+              <div class="Person">
+                  <button class="person center-block"><img src="image/team.png" alt="person"></button>
+                  <div class="caption">
+                      <h3>PERSON</h3>
+                      <!-- <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">off</a></p> -->
+                  </div>
+                  <center>
+
+                      <div class="onoffswitch" id="people" >
+                          <input type="checkbox" onclick="person()"  name="onoffswitch" class="onoffswitch-checkbox hidden" id="myonoffswitchPERSON" checked>
+                          <label class="onoffswitch-label" for="myonoffswitchPERSON">
+                  <span class="onoffswitch-inner"></span>
+                  <span class="onoffswitch-switch"></span>
+                  </label>
+                      </div>
+                  </center>
+              </div>
+          </div>
 
 <!-- icon1 -->
 
@@ -55,10 +65,20 @@
 
 <div class="col-sm-6 col-md-4">
   <div class="Door">
-    <button class="door center-block"><img src="image/doorway.png" alt="door"></button>
+    <button class="door center-block" id ="door"><img src="image/doorway.png" alt="door"></button>
     <div class="caption">
       <h3>DOOR</h3>
       <!-- <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">off</a></p> -->
+<center>
+
+      <div class="onoffswitch">
+      <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitchDOOR" checked>
+      <label class="onoffswitch-label" for="myonoffswitchDOOR">
+          <span class="onoffswitch-inner"></span>
+          <span class="onoffswitch-switch"></span>
+      </label>
+      </div>
+      </center>
     </div>
   </div>
 </div>
@@ -74,6 +94,16 @@
     <div class="caption">
       <h3>TEMPERATURE</h3>
       <!-- <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">off</a></p> -->
+      <center>
+
+            <div class="onoffswitch">
+            <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitchTEMPERATURE" onclick="tempmethod()" checked>
+            <label class="onoffswitch-label" for="myonoffswitchTEMPERATURE">
+                <span class="onoffswitch-inner"></span>
+                <span class="onoffswitch-switch"></span>
+            </label>
+            </div>
+            </center>
     </div>
   </div>
 </div>
@@ -88,7 +118,17 @@
     <button class="air center-block"><img src="image/air.png" alt="AIR"></button>
     <div class="caption">
       <h3>AIR-CONDITIONER</h3>
-      <!-- <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">off</a></p> -->
+  <!-- <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">off</a></p> -->
+  <center>
+
+        <div class="onoffswitch">
+        <input type="checkbox" name="onoffswitch" onclick="airmethod()" class="onoffswitch-checkbox hidden" id="myonoffswitchAIR"  checked>
+        <label class="onoffswitch-label" for="myonoffswitchAIR">
+            <span class="onoffswitch-inner"></span>
+            <span class="onoffswitch-switch"></span>
+        </label>
+        </div>
+        </center>
     </div>
   </div>
 </div>
@@ -102,6 +142,16 @@
     <div class="caption">
       <h3>SUN</h3>
       <!-- <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">off</a></p> -->
+      <center>
+
+            <div class="onoffswitch">
+            <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitchSUN" checked>
+            <label class="onoffswitch-label" for="myonoffswitchSUN">
+                <span class="onoffswitch-inner"></span>
+                <span class="onoffswitch-switch"></span>
+            </label>
+            </div>
+            </center>
     </div>
   </div>
 </div>
@@ -115,6 +165,16 @@
     <div class="caption">
       <h3>LIGHT</h3>
       <!-- <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">off</a></p> -->
+      <center>
+
+            <div class="onoffswitch">
+            <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" onclick="lightmethod()" id="myonoffswitchLIGHT" checked>
+            <label class="onoffswitch-label" for="myonoffswitchLIGHT">
+                <span class="onoffswitch-inner"></span>
+                <span class="onoffswitch-switch"></span>
+            </label>
+            </div>
+            </center>
     </div>
   </div>
 </div>
@@ -125,62 +185,69 @@
 
 <!-- Kong -->
 
+<center>
+  <br />
+  <br />
+  <br />
+  <br />
+  <h2>AUTO</h2>
+
     <div class="onoffswitch">
-    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
-    <label class="onoffswitch-label" for="myonoffswitch">
+      <input type="checkbox" onclick="automethod()"  name="onoffswitch" class="onoffswitch-checkbox hidden" id="myonoffswitchAUTO" checked>
+    <label class="onoffswitch-label" for="myonoffswitchAUTO">
         <span class="onoffswitch-inner"></span>
         <span class="onoffswitch-switch"></span>
     </label>
 </div>
+</center>
+
 <!--KONG  -->
 
-<ul class="list-person">
-  <li class="list-group-item">
-    <span class="badge" id="n-person">0</span>
-    Person
-  </li>
-</ul>
+
+        <ul class="list-person">
+            <li class="list-group-item">
+                <span class="badge" id="n-person">0</span> Person
+            </li>
+        </ul>
 
 
-<ul class="list-person">
-  <li class="list-group-item">
-    <span class="badge">14</span>
-    Door
-  </li>
-</ul>
+        <ul class="list-person">
+            <li class="list-group-item">
+                <span class="badge">14</span> Door
+            </li>
+        </ul>
 
 
-<ul class="list-person">
-  <li class="list-group-item">
-    <span class="badge">14</span>
-    Temperature
-  </li>
-</ul>
+        <ul class="list-person">
+            <li class="list-group-item">
+                <!-- เริ่ม -->
+                <div id="myProgress">
+                    <div id="myBar">0%</div>
+                </div>
+                <!-- จบ -->
+            </li>
+        </ul>
 
 
-<ul class="list-person">
-  <li class="list-group-item">
-    <span class="badge">14</span>
-    Air-Conditioner
-  </li>
-</ul>
+        <ul class="list-person">
+            <li class="list-group-item">
+                <span class="badge">14</span> Air-Conditioner
+            </li>
+        </ul>
 
 
-<ul class="list-person">
-  <li class="list-group-item">
-    <span class="badge">14</span>
-    Sun
-  </li>
-</ul>
+        <ul class="list-person">
+            <li class="list-group-item">
+                <span class="badge" id="sun">14</span> Sun
+            </li>
+        </ul>
 
 
-<ul class="list-person">
-  <li class="list-group-item">
-    <span class="badge">14</span>
-    Light
-  </li>
-</ul>
-
+        <ul class="list-person">
+            <li class="list-group-item">
+                <span class="badge">14</span> Light
+            </li>
+        </ul>
 
 
 
